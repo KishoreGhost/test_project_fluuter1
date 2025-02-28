@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
+import 'package:test_project_fluuter1/screens/screens/onboarding.dart';
 import 'package:test_project_fluuter1/screens/screens/resetPass.dart';
 import 'package:test_project_fluuter1/screens/screens/signUp.dart';
 
@@ -66,7 +67,10 @@ class LoginScreen extends StatelessWidget {
             // Continue Button
             ElevatedButton(
               onPressed: () {
-                // Handle login
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => OnboardingPage()),
+                );
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Color(0xFF9E60E6), // Purple

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_project_fluuter1/screens/screens/onboarding.dart';
 
 class signUpPage extends StatelessWidget {
   final List<String> fields = ["Firstname", "Lastname", "Email Address", "Password"];
@@ -45,7 +46,12 @@ class signUpPage extends StatelessWidget {
                 )),
             SizedBox(height: 20),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => OnboardingPage()),
+    );
+              },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Color(0xFF8F5FE8),
                 minimumSize: Size(double.infinity, 50),
